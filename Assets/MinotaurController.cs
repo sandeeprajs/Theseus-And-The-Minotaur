@@ -270,12 +270,13 @@ public class MinotaurController : MonoBehaviour
 
             MoveTheMinaotaur();
         }
-
-        if (moveCount >= 2)
+        else if (moveCount >= 2)
         {
             StopAllCoroutines();
+
             moveCount = 0;
             isMyTurn = false;
+
             GameManager.instance.PlayerTurn = true;
         }
     }
